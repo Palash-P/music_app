@@ -3,6 +3,7 @@
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 <!-- Android 13+ -->
 <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="music_app"
         android:name="${applicationName}"

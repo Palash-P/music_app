@@ -159,23 +159,26 @@ class PlayerBloc extends Bloc<PlayerEvent, PlayerState> {
   Future<String> _getLyrics(String title, String artist) async {
     final key = "${artist.toLowerCase()}_${title.toLowerCase()}";
 
-    // Check memory cache
+    // 1️⃣ Check in-memory cache
     if (_lyricsCache.containsKey(key)) return _lyricsCache[key]!;
 
-    // Check persistent storage
+    // 2️⃣ Check persistent storage
     final prefs = await SharedPreferences.getInstance();
     if (prefs.containsKey(key)) {
       final lyrics = prefs.getString(key)!;
-      _lyricsCache[key] = lyrics; // save to memory
+      _lyricsCache[key] = lyrics; // Save in memory
       return lyrics;
     }
 
-    // Fetch from API
+    // 3️⃣ Fetch from API
     final lyrics = await fetchLyrics(title, artist);
 
-    // Save to cache
-    _lyricsCache[key] = lyrics;
-    await prefs.setString(key, lyrics);
+    // Only cache valid lyrics, not error messages
+    if (lyrics != "Request timed out. Please check your internet." &&
+        lyrics != "Lyrics not found") {
+      _lyricsCache[key] = lyrics;
+      await prefs.setString(key, lyrics);
+    }
 
     return lyrics;
   }
