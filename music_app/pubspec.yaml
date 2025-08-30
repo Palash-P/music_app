@@ -7,10 +7,17 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
+  bloc: ^9.0.0
+  equatable: ^2.0.7
   flutter:
     sdk: flutter
   google_fonts: ^6.3.0
+  just_audio: ^0.10.4
   smooth_page_indicator: ^1.2.1
+  flutter_bloc: ^9.1.1
+  shared_preferences: ^2.5.3
+  on_audio_query: ^2.9.0
+  permission_handler: ^12.0.1
 
 dev_dependencies:
   flutter_test:
@@ -20,23 +27,12 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-  - assets/1.png
-  - assets/2.png
-  - assets/Rectangle 32.png
-  - assets/Rectangle 38.png
-  - assets/Rectangle 39.png
-  - assets/Rectangle 34.png
-  - assets/Rectangle 40.png
-  - assets/player.png
-  - assets/upload.png
-  - assets/loop.png
-  - assets/play.png
-  - assets/previous.png
-  - assets/next.png
-  - assets/volume.png
-  - assets/Vector.png
-  - assets/user.png
-  - assets/home.png
-  - assets/cart.png
-  - assets/search.png
-
+  - assets/logo.jpg
+  - assets/audio/blinding_lights.mp3
+  - assets/audio/stay.mp3
+  - assets/audio/shape_of_you.mp3
+  - assets/audio/levitating.mp3
+  - assets/audio/peaches.mp3
+  - assets/audio/bad_habits.mp3
+  - assets/audio/senorita.mp3
+  - assets/audio/believer.mp3
