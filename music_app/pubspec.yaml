@@ -28,11 +28,3 @@ flutter:
   uses-material-design: true
   assets:
   - assets/logo.jpg
-  - assets/audio/blinding_lights.mp3
-  - assets/audio/stay.mp3
-  - assets/audio/shape_of_you.mp3
-  - assets/audio/levitating.mp3
-  - assets/audio/peaches.mp3
-  - assets/audio/bad_habits.mp3
-  - assets/audio/senorita.mp3
-  - assets/audio/believer.mp3
